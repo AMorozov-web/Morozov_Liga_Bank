@@ -3,6 +3,8 @@ import {Logo} from '../logo/logo';
 import {Navigation} from '../navigation/navigation';
 import {UserBlock} from '../user-block/user-block';
 
+import './header.scss';
+
 const Header = () => {
 
   return (

@@ -1,0 +1,16 @@
+@import '../../sass/variables';
+
+.header {
+  display: flex;
+  justify-content: center;
+  min-height: 91px;
+  background-color: $zircon;
+}
+
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 1170px;
+  margin: 0 auto;
+}
