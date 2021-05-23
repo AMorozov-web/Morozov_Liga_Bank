@@ -1,5 +1,6 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CopyPlugin = require("copy-webpack-plugin");
 
 module.exports = {
   entry: './src/index.js',
@@ -25,8 +26,33 @@ module.exports = {
         },
       },
       {
+        test: /\.(png|jpe?g|gif|svg|woff|woff2)$/,
+          use: [
+            {
+              loader: 'file-loader',
+              options: {
+                name: '[path][name].[ext]',
+                emitFile: false,
+              },
+            },
+          ],
+      },
+      {
+        test: /\.css$/i,
+        exclude: /(node_modules)/,
+        use: [
+          {
+            loader: MiniCssExtractPlugin.loader,
+            options: {
+              publicPath: path.resolve(__dirname, 'public')
+            },
+          },
+          'css-loader',
+        ],
+      },
+      {
         test: /\.scss$/i,
-        exclude: /(node_modules|bower_components)/,
+        exclude: /(node_modules)/,
         use: [
           {
             loader: MiniCssExtractPlugin.loader,
@@ -40,9 +66,27 @@ module.exports = {
       },
     ],
   },
-  plugins: [new MiniCssExtractPlugin({
-    filename: 'css/styles.min.css',
-  })],
+  plugins: [
+    new MiniCssExtractPlugin({
+      filename: 'css/styles.min.css',
+    }),
+    new CopyPlugin({
+      patterns: [
+        {
+          from: 'src/assets/img',
+          to: 'img',
+        },
+        {
+          from: 'src/assets/css',
+          to: 'css',
+        },
+        {
+          from: 'src/assets/fonts',
+          to: 'fonts',
+        },
+      ],
+    }),
+  ],
   resolve: {
     extensions: ['.js', '.jsx']
   },
