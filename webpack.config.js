@@ -1,5 +1,6 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CopyPlugin = require("copy-webpack-plugin");
 
 module.exports = {
   entry: './src/index.js',
@@ -25,6 +26,18 @@ module.exports = {
         },
       },
       {
+        test: /\.(png|jpe?g|gif|svg)$/,
+          use: [
+            {
+              loader: 'file-loader',
+              options: {
+                name: '[path][name].[ext]',
+                emitFile: false,
+              },
+            },
+          ],
+      },
+      {
         test: /\.scss$/i,
         exclude: /(node_modules|bower_components)/,
         use: [
@@ -40,9 +53,22 @@ module.exports = {
       },
     ],
   },
-  plugins: [new MiniCssExtractPlugin({
-    filename: 'css/styles.min.css',
-  })],
+  plugins: [
+    new MiniCssExtractPlugin({
+      filename: 'css/styles.min.css',
+    }),
+    new CopyPlugin({
+      patterns: [
+        {
+          from: 'src/assets/img',
+          to: 'img',
+        },
+      ],
+      options: {
+        concurrency: 100,
+      },
+    }),
+  ],
   resolve: {
     extensions: ['.js', '.jsx']
   },
