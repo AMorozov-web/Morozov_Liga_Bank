@@ -38,8 +38,21 @@ module.exports = {
           ],
       },
       {
+        test: /\.css$/i,
+        exclude: /(node_modules)/,
+        use: [
+          {
+            loader: MiniCssExtractPlugin.loader,
+            options: {
+              publicPath: path.resolve(__dirname, 'public')
+            },
+          },
+          'css-loader',
+        ],
+      },
+      {
         test: /\.scss$/i,
-        exclude: /(node_modules|bower_components)/,
+        exclude: /(node_modules)/,
         use: [
           {
             loader: MiniCssExtractPlugin.loader,
@@ -63,10 +76,11 @@ module.exports = {
           from: 'src/assets/img',
           to: 'img',
         },
+        {
+          from: 'src/assets/css',
+          to: 'css',
+        },
       ],
-      options: {
-        concurrency: 100,
-      },
     }),
   ],
   resolve: {
