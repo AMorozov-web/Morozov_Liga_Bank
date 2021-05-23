@@ -1,5 +1,7 @@
 import React from 'react';
 
+import './navigation.scss';
+
 const Navigation = () => {
 
   return (
@@ -7,37 +9,27 @@ const Navigation = () => {
       <ul className="navigation__list">
         <li className="navigation__item">
           <a href="#" className="navigation__link">
-            <span className="navigation__span">
-              Услуги
-            </span>
+            Услуги
           </a>
         </li>
         <li className="navigation__item">
           <a href="#" className="navigation__link">
-            <span className="navigation__span">
-              Рассчитать кредит
-            </span>
+            Рассчитать кредит
           </a>
         </li>
         <li className="navigation__item navigation__item--current">
           <a href="#" className="navigation__link">
-            <span className="navigation__span">
-              Конвертер валют
-            </span>
+            Конвертер валют
           </a>
         </li>
         <li className="navigation__item">
           <a href="#" className="navigation__link">
-            <span className="navigation__span">
-              Контакты
-            </span>
+            Контакты
           </a>
         </li>
         <li className="navigation__item">
           <a href="#" className="navigation__link">
-            <span className="navigation__span">
-              Задать вопрос
-            </span>
+            Задать вопрос
           </a>
         </li>
       </ul>

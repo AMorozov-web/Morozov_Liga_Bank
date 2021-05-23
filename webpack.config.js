@@ -26,7 +26,7 @@ module.exports = {
         },
       },
       {
-        test: /\.(png|jpe?g|gif|svg)$/,
+        test: /\.(png|jpe?g|gif|svg|woff|woff2)$/,
           use: [
             {
               loader: 'file-loader',
@@ -79,6 +79,10 @@ module.exports = {
         {
           from: 'src/assets/css',
           to: 'css',
+        },
+        {
+          from: 'src/assets/fonts',
+          to: 'fonts',
         },
       ],
     }),

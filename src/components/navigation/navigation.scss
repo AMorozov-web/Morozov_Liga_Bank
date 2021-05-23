@@ -1,0 +1,32 @@
+@import '../../sass/variables';
+@import '../../sass/_mixins';
+
+.navigation__list {
+  @include list-style-none;
+
+  display: flex;
+  min-width: 610px;
+}
+
+.navigation__item:not(:last-child) {
+  margin-right: 25px;
+}
+
+.navigation__link {
+  @include font-family;
+  @include font-size(16px, 400, normal);
+
+  color: $balticsea;
+  text-decoration: none;
+
+  .navigation__item--current & {
+    color: $royalblue;
+  }
+
+  &:hover, &:focus {
+    color: $royalblue;
+    text-decoration: underline;
+  }
+}
+
+

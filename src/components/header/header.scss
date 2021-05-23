@@ -9,8 +9,16 @@
 
 .header__container {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  align-items: baseline;
   min-width: 1170px;
   margin: 0 auto;
+  padding-top: 27px;
+}
+
+.header__logo {
+  margin-right: 58px;
+}
+
+.header__user-block {
+  margin-left: auto;
 }
