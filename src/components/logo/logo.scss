@@ -1,0 +1,8 @@
+@import '../../sass/variables';
+
+.logo {
+  &:hover,
+  &:focus {
+    outline: $royalblue;
+  }
+}
