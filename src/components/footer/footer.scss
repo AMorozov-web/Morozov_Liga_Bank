@@ -1,0 +1,15 @@
+@import '../../sass/variables';
+@import '../../sass/mixins';
+
+.footer {
+  display: flex;
+  min-height: 224px;
+  padding-top: 49px;
+  background-color: $zircon;
+}
+
+.footer__container {
+  @include container;
+
+  display: flex;
+}
