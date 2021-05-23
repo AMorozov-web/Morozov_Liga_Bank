@@ -10,7 +10,7 @@ const Header = () => {
   return (
     <section className="header page-body__header">
       <div className="header__container">
-        <Logo />
+        <Logo position={`header`} />
         <Navigation />
         <UserBlock />
       </div>
