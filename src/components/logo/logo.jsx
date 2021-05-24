@@ -1,13 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import {Position} from '../../const';
 
 import './logo.scss';
 
 const getClassName = (position) => {
   switch (position) {
-    case `header`:
+    case Position.HEADER:
       return `header__logo`;
-    case `footer`:
+    case Position.FOOTER:
       return `footer__logo`;
   }
 

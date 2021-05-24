@@ -1,4 +1,5 @@
 import React from 'react';
+import {Position} from '../../const';
 import {Logo} from '../logo/logo';
 import {Navigation} from '../navigation/navigation';
 import {UserBlock} from '../user-block/user-block';
@@ -10,7 +11,7 @@ const Header = () => {
   return (
     <section className="header page-body__header">
       <div className="header__container">
-        <Logo position={`header`} />
+        <Logo position={Position.HEADER} />
         <Navigation />
         <UserBlock />
       </div>
