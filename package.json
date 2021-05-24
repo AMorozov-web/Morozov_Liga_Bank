@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "eslint": "eslint --ext .jsx --ext .js src/",
-    "test": "npm run eslint",
+    "stylelint": "stylelint \"src/sass/**/*.scss\" --syntax scss",
+    "test": "npm run eslint && npm run stylelint",
     "build": "webpack --mode production",
     "start": "webpack-dev-server"
   },
@@ -25,6 +26,8 @@
     "sass": "1.32.13",
     "sass-loader": "10.1.1",
     "style-loader": "2.0.0",
+    "stylelint": "13.6.1",
+    "stylelint-config-htmlacademy": "0.1.4",
     "webpack": "4.46.0",
     "webpack-cli": "3.3.12",
     "webpack-dev-server": "3.11.2"
