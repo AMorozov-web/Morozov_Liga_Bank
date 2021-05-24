@@ -5,6 +5,7 @@
   display: flex;
   min-height: 224px;
   padding-top: 49px;
+  padding-bottom: 49px;
   background-color: $zircon;
 }
 
@@ -12,4 +13,140 @@
   @include container;
 
   display: flex;
+  justify-content: space-between;
+}
+
+.footer__company-info {
+  display: flex;
+  flex-direction: column;
+  width: 252px;
+  height: fit-content;
+}
+
+.footer__logo {
+  margin-bottom: 20px;
+}
+
+.footer__address,
+.footer__text {
+  @include font-family;
+  @include font-size(12px, 400, 140%);
+
+  font-style: normal;
+  color: $raven;
+}
+
+.footer__text {
+  margin: 0;
+
+  .footer__mobile-phone & {
+    padding-left: 29px;
+  }
+
+  .footer__urban-phone & {
+    padding-left: 33px;
+  }
+}
+
+.footer__nav-list {
+  @include list-style-none;
+
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+  margin-top: 11px;
+}
+
+.footer__nav-item {
+  display: block;
+  height: 11px;
+
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
+
+.footer__nav-link {
+  @include font-family;
+  @include font-size(16px, 700, normal);
+
+  color: $balticsea;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: $royalblue;
+    text-decoration: underline;
+  }
+}
+
+.footer__mobile-phone,
+.footer__urban-phone {
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+  margin-top: 11px;
+}
+
+.footer__mobile-phone-link,
+.footer__urban-phone-link {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+  color: $balticsea;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: $royalblue;
+    text-decoration: underline;
+  }
+}
+
+.footer__mobile-phone-icon,
+.footer__urban-phone-icon {
+  fill: $balticsea;
+
+  .footer__mobile-phone-link:hover &,
+  .footer__mobile-phone-link:focus &,
+  .footer__urban-phone-link:hover &,
+  .footer__urban-phone-link:focus & {
+    fill: $royalblue;
+  }
+}
+
+.footer__mobile-phone-icon {
+  margin-right: 19px;
+}
+
+.footer__urban-phone-icon {
+  margin-right: 17px;
+}
+
+.footer__mobile-phone-number,
+.footer__urban-phone-number {
+  @include font-family;
+  @include font-size(16px, 700, 140%);
+
+  display: block;
+  margin: 0;
+}
+
+.footer__social {
+  @include list-style-none;
+
+  display: flex;
+  justify-content: space-between;
+  width: 106px;
+  height: fit-content;
+  margin-top: 11px;
+}
+
+.footer__social-link-icon {
+  fill: $balticsea;
+
+  .footer__social-link:hover &,
+  .footer__social-link:focus & {
+    fill: $royalblue;
+  }
 }

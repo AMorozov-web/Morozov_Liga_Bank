@@ -1,4 +1,5 @@
 import React from 'react';
+import {Position} from '../../const';
 import {Logo} from '../logo/logo';
 
 import './footer.scss';
@@ -9,13 +10,11 @@ const Footer = () => {
     <section className="footer page-body__footer">
       <div className="footer__container">
         <div className="footer__company-info">
-          <Logo position={`footer`} />
+          <Logo position={Position.FOOTER} />
           <address className="footer__address">
-            <p className="footer__text">
-              150015, г. Москва, ул. Московская, д. 32<br/>
-              Генеральная лицензия Банка России №1050<br/>
-              &#169; Лига Банк, 2019
-            </p>
+            150015, г. Москва, ул. Московская, д. 32<br/>
+            Генеральная лицензия Банка России №1050<br/>
+            &#169; Лига Банк, 2019
           </address>
         </div>
         <ul className="footer__nav-list">
@@ -65,8 +64,8 @@ const Footer = () => {
             </p>
           </a>
           <p className="footer__text">
-            Бесплатно для абонентов<br/>
-            МТС, Билайн, Мегафон, Теле2
+            Бесплатный для всех<br/>
+            городов России
           </p>
         </div>
         <ul className="footer__social">

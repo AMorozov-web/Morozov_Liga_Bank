@@ -7,10 +7,10 @@ import './main-page';
 const MainPage = () => {
 
   return (
-    <body className="page-body">
+    <>
       <Header />
       <Footer />
-    </body>
+    </>
   );
 };
 
