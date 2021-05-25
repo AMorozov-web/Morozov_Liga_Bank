@@ -5,21 +5,10 @@
   display: flex;
   background-color: $royalblue;
   background-image:
-      linear-gradient(180.24deg, rgba(32, 39, 179, 0) 36.31%, #2027b3 99.79%),
-      linear-gradient(183.47deg, rgba(56, 65, 255, 0) 66.3%, #3841FF 97.14%),
-      linear-gradient(183.47deg, rgba(56, 65, 255, 0) 27.26%, #3841FF 97.14%),
-      linear-gradient(180.24deg, rgba(32, 39, 179, 0) 32.89%, #2027B3 99.79%);
-  background-size:
-      150px 400px,
-      150px 269px,
-      270px 269px,
-      298px 400px;
+      linear-gradient(180.24deg, rgba(32, 39, 179, 0) 36.31%, #2027b3 99.79%);
   background-repeat: no-repeat;
   background-position:
-      bottom 0 left 0,
-      bottom 0 left 150px,
-      bottom 0 right 299px,
-      bottom 0 right 0;
+      bottom 0 left 0;
 }
 
 .promo__container {
@@ -29,7 +18,23 @@
   flex-direction: column;
   min-height: 400px;
   padding-left: 170px;
-  background-image: url("../../assets/img/cards.png");
+  padding-right: 170px;
+  background-image:
+      url("../img/cards.png"),
+      linear-gradient(183.47deg, rgba(56, 65, 255, 0) 66.3%, #3841FF 97.14%),
+      linear-gradient(183.47deg, rgba(56, 65, 255, 0) 27.26%, #3841FF 97.14%),
+      linear-gradient(0deg, $royalblue 0%, $royalblue 100%);
+  background-repeat: no-repeat;
+  background-size:
+      auto,
+      150px 269px,
+      270px 269px,
+      917px auto;
+  background-position:
+      top 80px right 149px,
+      bottom 0 left 52px,
+      bottom 0 right 201px,
+      bottom 0 left 52px;
 }
 
 .promo__title {
@@ -65,4 +70,10 @@
   background-color: $zircon;
   text-decoration: none;
   border-radius: 4px;
+
+  &:hover,
+  &:focus {
+    color: $zircon;
+    background-color: $balticsea;
+  }
 }
