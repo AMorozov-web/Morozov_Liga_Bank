@@ -41,7 +41,7 @@ const Form = () => {
       </button>
       <div className="form__input-result-wrapper">
         <label className="form__input-result-label" htmlFor="input-result">
-          У меня есть
+          Хочу приобрести
         </label>
         <input className="form__input-result" type="text" id="input-result" name="input-result" defaultValue="13,1234" />
       </div>
