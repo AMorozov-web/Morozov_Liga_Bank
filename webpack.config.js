@@ -60,7 +60,12 @@ module.exports = {
               publicPath: path.resolve(__dirname, 'public')
             },
           },
-          'css-loader',
+          {
+            loader: 'css-loader',
+            options: {
+              url: false,
+            },
+          },
           'sass-loader'
         ],
       },
