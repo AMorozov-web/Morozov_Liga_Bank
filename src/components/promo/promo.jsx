@@ -1,20 +1,20 @@
 import React from 'react';
 
-import './promo';
+import './promo.scss';
 
 const Promo = () => {
   return (
     <section className="promo converter__promo">
       <div className="promo__container">
-        <h2 className="promo__heading">
+        <h2 className="promo__title">
           Лига Банк
         </h2>
         <p className="promo__description">
           Кредиты на любой случай
         </p>
-        <button className="promo__button">
+        <a href="" className="promo__link">
           Рассчитать кредит
-        </button>
+        </a>
       </div>
     </section>
   );
