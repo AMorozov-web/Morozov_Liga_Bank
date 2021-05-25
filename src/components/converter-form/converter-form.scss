@@ -1,0 +1,27 @@
+@import '../../sass/variables';
+@import '../../sass/mixins';
+
+.converter-form {
+  display: flex;
+  min-height: 510px;
+}
+
+.converter-form__container {
+  @include container;
+
+  display: flex;
+  flex-direction: column;
+  padding-top: 60px;
+}
+
+.converter-form__title {
+  @include font-family;
+  @include font-size(41px, 700, 57px);
+
+  margin: 0;
+  margin-bottom: 70px;
+}
+
+.converter__form {
+  margin-bottom: 100px;
+}
