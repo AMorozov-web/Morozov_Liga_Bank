@@ -1,0 +1,80 @@
+@import '../../sass/variables';
+@import '../../sass/mixins';
+
+.promo {
+  display: flex;
+  background-color: $royalblue;
+  background-image:
+      linear-gradient(180.24deg, rgba(32, 39, 179, 0) 36.31%, #2027b3 99.79%);
+  background-repeat: no-repeat;
+  background-position:
+      bottom 0 left 0;
+}
+
+.promo__container {
+  @include container;
+
+  display: flex;
+  flex-direction: column;
+  min-height: 400px;
+  padding-left: 170px;
+  padding-right: 170px;
+  background-image:
+      url("../img/cards.png"),
+      linear-gradient(183.47deg, rgba(56, 65, 255, 0) 66.3%, #3841FF 97.14%),
+      linear-gradient(183.47deg, rgba(56, 65, 255, 0) 27.26%, #3841FF 97.14%),
+      linear-gradient(0deg, $royalblue, $royalblue);
+  background-repeat: no-repeat;
+  background-size:
+      auto,
+      150px 269px,
+      270px 269px,
+      917px auto;
+  background-position:
+      top 61px right 126px,
+      bottom 0 left 52px,
+      bottom 0 right 201px,
+      bottom 0 left 52px;
+}
+
+.promo__title {
+  @include font-family;
+  @include font-size(52px, bold, 54px);
+
+  margin-top: 106px;
+  margin-bottom: 13px;
+  color: $zircon;
+}
+
+.promo__description {
+  @include font-family;
+  @include font-size(22px, 500, 26px);
+
+  margin: 0;
+  margin-bottom: 34px;
+  color: $athensgrey;
+  letter-spacing: 0.2px;
+}
+
+.promo__link {
+  @include font-family;
+  @include font-size(17px, 700, 21px);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 234px;
+  min-height: 53px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  color: $balticsea;
+  background-color: $zircon;
+  text-decoration: none;
+  border-radius: 4px;
+
+  &:hover,
+  &:focus {
+    color: $zircon;
+    background-color: $balticsea;
+  }
+}

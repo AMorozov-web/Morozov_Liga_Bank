@@ -23,12 +23,16 @@
   }
 
   &__icon {
-    margin-right: 10px;
+    margin-right: 9px;
     fill: $balticsea;
 
     .user-block__link:hover &,
     .user-block__link:focus & {
       fill: $royalblue;
     }
+  }
+
+  &__span {
+    margin-top: 5px;
   }
 }
