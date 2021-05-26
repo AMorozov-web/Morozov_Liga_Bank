@@ -4,8 +4,8 @@
 .footer {
   display: flex;
   min-height: 224px;
-  padding-top: 49px;
-  padding-bottom: 49px;
+  padding-top: 48px;
+  padding-bottom: 48px;
   background-color: $zircon;
 }
 
@@ -13,7 +13,7 @@
   @include container;
 
   display: flex;
-  justify-content: space-between;
+  padding-left: 7px;
 }
 
 .footer__company-info {
@@ -21,16 +21,17 @@
   flex-direction: column;
   width: 252px;
   height: fit-content;
+  margin-right: 82px;
 }
 
 .footer__logo {
-  margin-bottom: 20px;
+  margin-bottom: 12px;
 }
 
 .footer__address,
 .footer__text {
   @include font-family;
-  @include font-size(12px, 400, 140%);
+  @include font-size(12px, 500, 140%);
 
   font-style: normal;
   color: $raven;
@@ -54,7 +55,8 @@
   display: flex;
   flex-direction: column;
   height: fit-content;
-  margin-top: 11px;
+  margin-top: 9px;
+  margin-right: 74px;
 }
 
 .footer__nav-item {
@@ -85,14 +87,22 @@
   display: flex;
   flex-direction: column;
   height: fit-content;
-  margin-top: 11px;
+  margin-top: 9px;
+}
+
+.footer__mobile-phone {
+  margin-right: 77px;
+}
+
+.footer__urban-phone {
+  margin-right: 82px;
 }
 
 .footer__mobile-phone-link,
 .footer__urban-phone-link {
   display: flex;
   align-items: center;
-  margin-bottom: 8px;
+  margin-bottom: 2px;
   color: $balticsea;
   text-decoration: none;
 
@@ -116,7 +126,7 @@
 }
 
 .footer__mobile-phone-icon {
-  margin-right: 19px;
+  margin-right: 20px;
 }
 
 .footer__urban-phone-icon {
@@ -136,10 +146,13 @@
   @include list-style-none;
 
   display: flex;
-  justify-content: space-between;
   width: 106px;
   height: fit-content;
   margin-top: 11px;
+}
+
+.footer__social-item:not(:last-child) {
+  margin-right: 14px;
 }
 
 .footer__social-link-icon {

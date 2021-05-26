@@ -68,7 +68,7 @@ const Form = () => {
         <label className="visually-hidden" htmlFor="input-date">
           Введите дату
         </label>
-        <input className="form__input-date" type="date" name="input-date" id="input-date" />
+        <input className="form__input-date" type="text" name="input-date" id="input-date" value="1.12.2020"/>
       </div>
       <button className="form__save-button" type="submit">
         Сохранить результат

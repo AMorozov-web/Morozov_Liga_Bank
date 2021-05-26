@@ -22,9 +22,9 @@
 .form__input-start-label,
 .form__input-result-label {
   @include font-family;
-  @include font-size(22px, 700, 31px);
+  @include font-size(21px, 700, 31px);
 
-  margin-bottom: 30px;
+  margin-bottom: 22px;
   color: $balticsea;
 }
 
@@ -45,6 +45,14 @@
   &:focus {
     border-color: $royalblue;
   }
+}
+
+.form__input-date {
+  @include font-size(24px, 500, 34px);
+
+  padding-left: 118px;
+  padding-right: 118px;
+  text-align: left;
 }
 
 .form__select-start-wrapper,
@@ -113,10 +121,11 @@
   grid-row: 1 / 2;
 
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   align-self: flex-end;
   height: 60px;
   padding: 0;
+  padding-top: 10px;
   background: transparent;
   border: none;
   cursor: pointer;
@@ -146,18 +155,32 @@
 .form__input-date-wrapper {
   grid-column: 1 / 2;
   grid-row: 2 / -1;
+
+  position: relative;
   width: fit-content;
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 6px;
+    right: 20px;
+    width: 41px;
+    height: 44px;
+    background-image: url("../img/date.svg");
+    background-repeat: no-repeat;
+  }
 }
 
 .form__save-button {
   @include font-family;
-  @include font-size(18px, 700, 25px);
+  @include font-size(17px, 700, 25px);
 
   grid-column: 4 / -1;
   grid-row: 2 / -1;
   justify-self: flex-end;
   width: 382px;
   height: 60px;
+  padding: 0;
   background-color: $royalblue;
   color: $zircon;
   border: none;

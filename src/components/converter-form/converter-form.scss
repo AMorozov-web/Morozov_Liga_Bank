@@ -11,14 +11,14 @@
 
   display: flex;
   flex-direction: column;
-  padding-top: 60px;
+  padding-top: 47px;
   padding-bottom: 100px;
 }
 
 .converter-form__title {
   @include font-family;
-  @include font-size(41px, 700, 57px);
+  @include font-size(39px, 700, 57px);
 
   margin: 0;
-  margin-bottom: 70px;
+  margin-bottom: 48px;
 }

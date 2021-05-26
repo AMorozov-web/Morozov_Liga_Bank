@@ -31,7 +31,7 @@
       270px 269px,
       917px auto;
   background-position:
-      top 80px right 149px,
+      top 61px right 126px,
       bottom 0 left 52px,
       bottom 0 right 201px,
       bottom 0 left 52px;
@@ -39,25 +39,26 @@
 
 .promo__title {
   @include font-family;
-  @include font-size(54px, bold, 54px);
+  @include font-size(52px, bold, 54px);
 
-  margin-top: 115px;
-  margin-bottom: 25px;
+  margin-top: 106px;
+  margin-bottom: 13px;
   color: $zircon;
 }
 
 .promo__description {
   @include font-family;
-  @include font-size(22px, normal, 26px);
+  @include font-size(22px, 500, 26px);
 
   margin: 0;
-  margin-bottom: 40px;
+  margin-bottom: 34px;
   color: $athensgrey;
+  letter-spacing: 0.2px;
 }
 
 .promo__link {
   @include font-family;
-  @include font-size(18px, 700, 21px);
+  @include font-size(17px, 700, 21px);
 
   display: flex;
   justify-content: center;
