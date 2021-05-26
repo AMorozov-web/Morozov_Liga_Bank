@@ -1,14 +1,20 @@
 import {createSelector} from 'reselect';
 
-const selectAllPairs = (state) => state.pairs;
-const selectIsPairsLoaded = (state) => state.isPairsLoaded;
-const selectOnePair = (pair) => createSelector(
-    selectAllPairs,
-    (pairs) => pairs.find((el) => el === pair)
+const selectStartCurrency = (state) => state.startCurrency;
+const selectResultRates = (state) => state.resultRates;
+const selectIsCurrencyLoaded = (state) => state.isCurrencyLoaded;
+const selectOneRate = (resultCurrency) => createSelector(
+    selectResultRates,
+    (rates) => {
+      const rateKey = Object.keys(rates).find((key) => key === resultCurrency);
+      return rates[rateKey];
+    }
 );
 
+
 export {
-  selectAllPairs,
-  selectIsPairsLoaded,
-  selectOnePair,
+  selectStartCurrency,
+  selectResultRates,
+  selectOneRate,
+  selectIsCurrencyLoaded,
 };

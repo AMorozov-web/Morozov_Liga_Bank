@@ -1,21 +1,21 @@
 import {
-  apiKey,
-  currencyPairs,
+  APIKEY,
+  ApiRoute,
 } from "../const";
-import {loadPairs} from "./action";
 
-const fetchPairs = () => (dispatch, _getState, api) => (
-  api.get(`/`, {
+const fetchLatestRates = (symbolsArr) => (dispatch, _getState, api) => (
+  api.get(ApiRoute.LATEST, {
     params: {
-      get: `rates`,
-      pairs: currencyPairs.join(`,`),
-      key: apiKey,
+      [`access_key`]: APIKEY,
+      symbols: symbolsArr.join(`,`),
     }
   })
-    .then(({data}) => {
-      dispatch(loadPairs(data));
+    .then((data) => {
+      console.log(data);
     })
     .catch(() => {})
 );
 
-export {fetchPairs};
+export {
+  fetchLatestRates,
+};

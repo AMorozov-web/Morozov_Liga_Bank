@@ -1,15 +1,17 @@
 import {createReducer} from '@reduxjs/toolkit';
-import {loadPairs} from './action';
+import {loadCurrency} from './action';
 
 const initialState = {
-  pairs: {},
-  isPairsLoaded: false,
+  startCurrency: ``,
+  resultRates: {},
+  isCurrencyLoaded: false,
 };
 
 const mainReducer = createReducer(initialState, (builder) => {
-  builder.addCase(loadPairs, (state, action) => {
-    state.isPairsLoaded = true;
-    state.pairs = action.payload;
+  builder.addCase(loadCurrency, (state, action) => {
+    state.isCurrencyLoaded = true;
+    state.startCurrency = action.payload.base;
+    state.resultRates = action.payload.rates;
   });
 });
 

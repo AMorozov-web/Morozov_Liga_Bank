@@ -5,9 +5,8 @@ import {createAPI} from "./services/api";
 import {configureStore} from '@reduxjs/toolkit';
 import {mainReducer} from './store/reducer';
 import {App} from './components/app/app';
-import {fetchPairs} from './store/api-actions';
 
-const api = createAPI(() => store.dispatch(fetchPairs()));
+const api = createAPI();
 
 const store = configureStore({
   reducer: mainReducer,

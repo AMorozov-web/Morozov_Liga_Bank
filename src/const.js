@@ -1,41 +1,21 @@
-const BACKEND_URL = `https://currate.ru/api/`;
+const BACKEND_URL = `http://data.fixer.io/api/`;
 const REQUEST_TIMEOUT = 5000;
+const APIKEY = `f1a14d5f39a56f7ce7ce0dcaf8d3083e`;
+
+const ApiRoute = {
+  LATEST: `/latest`,
+  CONVERT: `/convert`,
+};
 
 const Position = {
   HEADER: `header`,
   FOOTER: `footer`,
 };
 
-const apiKey = `c356d01ba476cba3c2c37c26537a5498`;
-
-const currencyPairs = [
-  `USDRUB`,
-  `USDEUR`,
-  `USDGBR`,
-  `USDCNY`,
-  `RUBUSD`,
-  `RUBEUR`,
-  `RUBGBR`,
-  `RUBCNY`,
-  `EURUSD`,
-  `EURRUB`,
-  `EURGBR`,
-  `EURCNY`,
-  `GBRUSD`,
-  `GBRRUB`,
-  `GBREUR`,
-  `GBRCNY`,
-  `CNYUSD`,
-  `CNYRUB`,
-  `CNYEUR`,
-  `CNYGBR`
-];
-
-
 export {
   BACKEND_URL,
   REQUEST_TIMEOUT,
+  APIKEY,
   Position,
-  apiKey,
-  currencyPairs,
+  ApiRoute,
 };

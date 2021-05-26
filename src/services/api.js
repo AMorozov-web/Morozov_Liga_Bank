@@ -5,7 +5,7 @@ const createAPI = () => {
   const api = axios.create({
     baseURL: BACKEND_URL,
     timeout: REQUEST_TIMEOUT,
-    withCredentials: true,
+    withCredentials: false,
   });
 
   const onSuccess = (response) => response;
