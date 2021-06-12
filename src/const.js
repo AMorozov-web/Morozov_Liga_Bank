@@ -1,11 +1,7 @@
-const BACKEND_URL = `http://data.fixer.io/api/`;
+const BACKEND_URL = `https://v6.exchangerate-api.com/v6/f5f855537fa8d294cc5bcd4b`;
 const REQUEST_TIMEOUT = 5000;
-const APIKEY = `f1a14d5f39a56f7ce7ce0dcaf8d3083e`;
 
-const ApiRoute = {
-  LATEST: `/latest`,
-  CONVERT: `/convert`,
-};
+const CURRENCIES = [`USD`, `EUR`, `RUB`, `GBR`, `CNY`];
 
 const Position = {
   HEADER: `header`,
@@ -15,7 +11,6 @@ const Position = {
 export {
   BACKEND_URL,
   REQUEST_TIMEOUT,
-  APIKEY,
+  CURRENCIES,
   Position,
-  ApiRoute,
 };

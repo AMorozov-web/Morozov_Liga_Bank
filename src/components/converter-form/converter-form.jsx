@@ -12,7 +12,7 @@ const ConverterForm = () => {
 
   useEffect(() => {
     if (!isCurrencyLoaded) {
-      dispatch(fetchLatestRates([`RUB`]));
+      dispatch(fetchLatestRates(`EUR`));
     }
   }, []);
 

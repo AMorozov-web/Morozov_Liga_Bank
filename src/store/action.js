@@ -1,15 +1,15 @@
 import {createAction} from '@reduxjs/toolkit';
 
 const ActionType = {
-  LOAD_CURRENCY: `data/loadCurrency`,
+  LOAD_CURRENCY: `data/loadRates`,
 };
 
-const loadCurrency = createAction(ActionType.LOAD_CURRENCY, (data) => {
+const loadRates = createAction(ActionType.LOAD_CURRENCY, (data) => {
   return {
     payload: data,
   };
 });
 
 export {
-  loadCurrency
+  loadRates
 };
