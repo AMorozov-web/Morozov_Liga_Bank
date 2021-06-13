@@ -1,6 +1,15 @@
 import React from 'react';
-
+import {CURRENCIES} from '../../const';
 import './form.scss';
+
+const getOption = (opt) => {
+
+  return (
+    <option key={opt} value={opt}>
+      {opt}
+    </option>
+  );
+};
 
 const Form = () => {
 
@@ -14,21 +23,7 @@ const Form = () => {
       </div>
       <div className="form__select-start-wrapper">
         <select className="form__select-start" name="select-start" id="select-start" defaultValue="RUB">
-          <option value="USD">
-            USD
-          </option>
-          <option value="RUB">
-            RUB
-          </option>
-          <option value="EUR">
-            EUR
-          </option>
-          <option value="GBR">
-            GBR
-          </option>
-          <option value="CNY">
-            CNY
-          </option>
+          {CURRENCIES.map((opt) => getOption(opt))}
         </select>
       </div>
       <button className="form__change-values-button" type="button" aria-label="swap values">
@@ -47,28 +42,14 @@ const Form = () => {
       </div>
       <div className="form__select-result-wrapper">
         <select className="form__select-result" name="select-result" id="select-result" defaultValue="USD">
-          <option value="USD">
-            USD
-          </option>
-          <option value="RUB">
-            RUB
-          </option>
-          <option value="EUR">
-            EUR
-          </option>
-          <option value="GBR">
-            GBR
-          </option>
-          <option value="CNY">
-            CNY
-          </option>
+          {CURRENCIES.map((opt) => getOption(opt))}
         </select>
       </div>
       <div className="form__input-date-wrapper">
         <label className="visually-hidden" htmlFor="input-date">
           Введите дату
         </label>
-        <input className="form__input-date" type="text" name="input-date" id="input-date" value="1.12.2020"/>
+        <input className="form__input-date" type="text" name="input-date" id="input-date" defaultValue="1.12.2020"/>
       </div>
       <button className="form__save-button" type="submit">
         Сохранить результат
