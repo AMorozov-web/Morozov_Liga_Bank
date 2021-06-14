@@ -1,4 +1,4 @@
-const fetchLatestRates = (currency) => (dispatch, _getState, api) => (
+const fetchLatestSelectedRates = (currency) => (dispatch, _getState, api) => (
   api.get(`/latest/${currency}`)
     .then(({data}) => {
       console.log(data);
@@ -7,5 +7,5 @@ const fetchLatestRates = (currency) => (dispatch, _getState, api) => (
 );
 
 export {
-  fetchLatestRates,
+  fetchLatestSelectedRates,
 };

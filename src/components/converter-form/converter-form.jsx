@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
-import {fetchLatestRates} from '../../store/api-actions';
+import {fetchLatestSelectedRates} from '../../store/api-actions';
 import {selectIsCurrencyLoaded} from '../../store/selectors';
 import {Form} from '../form/form';
 
@@ -11,9 +11,9 @@ const ConverterForm = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    if (!isCurrencyLoaded) {
-      dispatch(fetchLatestRates(`EUR`));
-    }
+    // if (!isCurrencyLoaded) {
+    //   dispatch(fetchLatestSelectedRates(`EUR`));
+    // }
   }, []);
 
   if (!isCurrencyLoaded) {

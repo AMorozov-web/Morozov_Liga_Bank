@@ -5,6 +5,7 @@ const ActionType = {
 };
 
 const loadRates = createAction(ActionType.LOAD_CURRENCY, (data) => {
+
   return {
     payload: data,
   };

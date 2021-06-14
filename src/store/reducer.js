@@ -10,8 +10,8 @@ const initialState = {
 const mainReducer = createReducer(initialState, (builder) => {
   builder.addCase(loadRates, (state, action) => {
     state.isCurrencyLoaded = true;
-    state.startCurrency = action.payload.base;
-    state.resultRates = action.payload.rates;
+    state.startCurrency = action.payload.base_code;
+    state.resultRates = action.payload.conversion_rates;
   });
 });
 
